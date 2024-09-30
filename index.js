@@ -59,7 +59,7 @@
    //Function that takes the user choice of Rock, Paper or Scissors
    function getHumanChoice() {
       let humanChoice = prompt("What is your choice?");
-      humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
+      //humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
       return humanChoice;
 
    }
@@ -70,3 +70,12 @@
    let humanScore = 0;
    let computerScore = 0;
 
+   //Function logic to play a single round of Rock, Paper, Scissors
+   function playRound(humanChoice, computerChoice) {
+      
+   }
+
+   const humanSelection = getHumanChoice();
+   const computerSelection = getComputerChoice();
+
+   playRound(humanSelection, computerSelection);
