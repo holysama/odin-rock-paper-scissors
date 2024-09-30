@@ -58,9 +58,9 @@
 
    //Function that takes the user choice of Rock, Paper or Scissors
    function getHumanChoice() {
-      let userChoice = prompt("What is your choice?");
-      userChoice = userChoice.charAt(0).toUpperCase() + userChoice.slice(1).toLowerCase();
-      return userChoice;
+      let humanChoice = prompt("What is your choice?");
+      humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
+      return humanChoice;
 
    }
    let humanChoice = getHumanChoice();
@@ -69,3 +69,4 @@
    //Declaring players score variables
    let humanScore = 0;
    let computerScore = 0;
+
