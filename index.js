@@ -65,3 +65,7 @@
    }
    let humanChoice = getHumanChoice();
    console.log(humanChoice)
+
+   //Declaring players score variables
+   let humanScore = 0;
+   let computerScore = 0;
