@@ -40,41 +40,54 @@
    //Function that let's computer return Rock, Paper or Scissors
    function getComputerChoice() {
       let number = Math.floor(Math.random() * 3 + 1);
-      
+      let choice;
+
       if (number === 1) {
          choice = 'Rock';
-         return choice;
       } else if (number === 2) {
          choice = 'Paper';
-         return choice;
       } else if (number === 3) {
-         choice = 'Scissors'
-         return choice;
+         choice = 'Scissors';
       }
-      console.log(number);
+      return choice;
    }
    let computerChoice = getComputerChoice();
-   console.log(getComputerChoice());
+   console.log(computerChoice);
+   
 
    //Function that takes the user choice of Rock, Paper or Scissors
    function getHumanChoice() {
       let humanChoice = prompt("What is your choice?");
-      //humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
+      humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
       return humanChoice;
 
    }
    let humanChoice = getHumanChoice();
-   console.log(humanChoice)
+   console.log(humanChoice);
 
-   //Declaring players score variables
-   let humanScore = 0;
-   let computerScore = 0;
+   //Declaring players score variables   let computerScore = 0;
 
    //Function logic to play a single round of Rock, Paper, Scissors
    function playRound(humanChoice, computerChoice) {
-      
+      //Human Wins
+      if (humanSelection === computerSelection) {
+         console.log("It's a tie")
+      } else if (humanSelection === "Rock" && computerSelection === "Scissors") {
+         console.log("Rock beats Scissors, You won");
+      } else if (humanSelection === "Paper" && computerSelection === "Rock") {
+         console.log("Paper beats rock, You won");
+      } else if (humanSelection === "Scissors" && computerSelection === "Paper") {
+         console.log("Scissors beat Paper, You won");
+      }
+      //Computer Wins
+      else if (humanSelection === "Scissors" && computerSelection === "Rock") {
+         console.log("Rock beats Scissors, You lost")
+      } else if (humanSelection === "Rock" && computerSelection === "Paper") {
+         console.log("Paper beats rock, You lost")
+      } else if (humanSelection === "Paper" && computerSelection === "Scissors") {
+         console.log("Scissors beat Paper, You lost")
+      }
    }
-
    const humanSelection = getHumanChoice();
    const computerSelection = getComputerChoice();
 
