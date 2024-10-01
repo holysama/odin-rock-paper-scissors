@@ -51,6 +51,7 @@
       }
       return choice;
    }
+   
    let computerChoice = getComputerChoice();
    console.log(computerChoice);
    
@@ -61,6 +62,7 @@
       humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
       return humanChoice;
    }
+   
    let humanChoice = getHumanChoice();
    console.log(humanChoice);
 
