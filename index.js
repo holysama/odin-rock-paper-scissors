@@ -60,35 +60,40 @@
       let humanChoice = prompt("What is your choice?");
       humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase();
       return humanChoice;
-
    }
    let humanChoice = getHumanChoice();
    console.log(humanChoice);
 
-   //Declaring players score variables   let computerScore = 0;
+   //Declaring players score variables 
+   let humanScore = 0;
+   let computerScore = 0;
 
    //Function logic to play a single round of Rock, Paper, Scissors
    function playRound(humanChoice, computerChoice) {
+      
+      console.log("Computer chose: " + computerChoice);
+      console.log("Human chose: " + humanChoice);
+
       //Human Wins
-      if (humanSelection === computerSelection) {
+      if (humanChoice === computerChoice) {
          console.log("It's a tie")
-      } else if (humanSelection === "Rock" && computerSelection === "Scissors") {
+      } else if (humanChoice === "Rock" && computerChoice === "Scissors") {
          console.log("Rock beats Scissors, You won");
-      } else if (humanSelection === "Paper" && computerSelection === "Rock") {
+      } else if (humanChoice === "Paper" && computerChoice === "Rock") {
          console.log("Paper beats rock, You won");
-      } else if (humanSelection === "Scissors" && computerSelection === "Paper") {
+      } else if (humanChoice === "Scissors" && computerChoice === "Paper") {
          console.log("Scissors beat Paper, You won");
       }
       //Computer Wins
-      else if (humanSelection === "Scissors" && computerSelection === "Rock") {
+      else if (humanChoice === "Scissors" && computerChoice === "Rock") {
          console.log("Rock beats Scissors, You lost")
-      } else if (humanSelection === "Rock" && computerSelection === "Paper") {
+      } else if (humanChoice === "Rock" && computerChoice === "Paper") {
          console.log("Paper beats rock, You lost")
-      } else if (humanSelection === "Paper" && computerSelection === "Scissors") {
+      } else if (humanChoice === "Paper" && computerChoice === "Scissors") {
          console.log("Scissors beat Paper, You lost")
       }
    }
-   const humanSelection = getHumanChoice();
-   const computerSelection = getComputerChoice();
+   //const humanSelection = getHumanChoice();
+   //const computerSelection = getComputerChoice();
 
-   playRound(humanSelection, computerSelection);
+   playRound(humanChoice, computerChoice);
