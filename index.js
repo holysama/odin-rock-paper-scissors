@@ -93,7 +93,5 @@
          console.log("Scissors beat Paper, You lost")
       }
    }
-   //const humanSelection = getHumanChoice();
-   //const computerSelection = getComputerChoice();
-
+   
    playRound(humanChoice, computerChoice);
