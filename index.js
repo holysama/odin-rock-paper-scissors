@@ -36,8 +36,12 @@
    6)Whoever wins 3 rounds first wins
 
   */
+   //Declaring players score variables 
+   let humanScore = 0;
+   let computerScore = 0;
    
    //Function that let's computer return Rock, Paper or Scissors
+   function match() {
    function getComputerChoice() {
       let number = Math.floor(Math.random() * 3 + 1);
       let choice;
@@ -65,10 +69,6 @@
    
    let humanChoice = getHumanChoice();
    console.log(humanChoice);
-
-   //Declaring players score variables 
-   let humanScore = 0;
-   let computerScore = 0;
 
    //Function logic to play a single round of Rock, Paper, Scissors
    function playRound(humanChoice, computerChoice) {
@@ -103,11 +103,18 @@
 
       console.log("Score: Human " + humanScore + " Computer " + computerScore);
       
-   }
+   } 
    
    playRound(humanChoice, computerChoice);
+   
+   }
 
    //Function logic to play the whole game (5 rounds)
    function playGame() {
-
+      for (let i = 1; i <= 5; i++) {
+         match();
+      }
    }
+   playGame();
+   
+  
