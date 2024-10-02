@@ -36,7 +36,7 @@
    6)Whoever wins 3 rounds first wins
 
   */
- 
+
    //Declaring players score variables 
    let humanScore = 0;
    let computerScore = 0;
@@ -117,5 +117,12 @@
       }
    }
    playGame();
-   
+
+   if (humanScore == computerScore) {
+      console.log ("It's a tie! That was close!");
+   } else if (humanScore > computerScore) {
+      console.log ("You won! Congratulations!");
+   } else if (computerScore > humanScore) {
+      console.log ("You lost! Try again next time you got this!");
+   }
   
