@@ -36,6 +36,7 @@
    6)Whoever wins 3 rounds first wins
 
   */
+ 
    //Declaring players score variables 
    let humanScore = 0;
    let computerScore = 0;
