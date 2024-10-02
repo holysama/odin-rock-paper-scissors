@@ -58,7 +58,6 @@
    }
    
    let computerChoice = getComputerChoice();
-   console.log(computerChoice);
    
 
    //Function that takes the user choice of Rock, Paper or Scissors
@@ -70,6 +69,7 @@
    
    let humanChoice = getHumanChoice();
    console.log(humanChoice);
+   console.log(computerChoice);
 
    //Function logic to play a single round of Rock, Paper, Scissors
    function playRound(humanChoice, computerChoice) {
