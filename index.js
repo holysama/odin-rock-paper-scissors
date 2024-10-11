@@ -125,4 +125,4 @@
    } else if (computerScore > humanScore) {
       console.log ("You lost! Try again next time you got this!");
    }
-  
+   
